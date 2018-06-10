@@ -1,0 +1,24 @@
+.note-details{
+
+}
+
+.note-details .row{
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom:10px;
+}
+
+.note-details .row label{
+    flex-basis: 200px;
+    align-self: center;
+} 
+
+.note-details .buttons{
+   display: flex;
+   justify-content: flex-end;
+}
+
+.note-details .row input, .note-details .row textarea{
+    width: 400px;
+ }

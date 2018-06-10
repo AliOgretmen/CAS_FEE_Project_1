@@ -1,0 +1,107 @@
+.task {
+    background: rgb(16, 92, 155);
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.task>div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.task .first-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 50px;
+}
+
+.task .first-row>div {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 50px;
+}
+
+.task .first-row .due-date {
+    flex: 2;
+    align-items: center;
+}
+
+.task .first-row .middle {
+    flex: 4;
+    align-items: center;
+}
+
+.task .first-row .middle .description {
+    flex: 4;
+    align-items: center;
+}
+
+.task .first-row .middle .rating {
+    flex: 1;
+    align-items: center;
+}
+
+.task .first-row .empty {
+    flex: 1;
+}
+
+.task .second-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: 50px;
+}
+
+.task .second-row>div {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.task .second-row .is-finished {
+    flex: 2;
+}
+
+.task .second-row .is-finished>div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.task .second-row .info {
+    flex: 4;
+}
+
+.task .second-row .list-container {
+    background: white;
+    flex: 1;
+    overflow: hidden;
+    padding: 10px 10px;
+    /* you need to remove this and adjust heigh with javascript*/
+    height: 50px;
+    border-radius: 4px;
+    color: black;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.task .second-row .edit-container {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-note {
+    display: flex;
+    flex-direction: column;
+}
+
+.expand{
+    height: auto !important;
+}

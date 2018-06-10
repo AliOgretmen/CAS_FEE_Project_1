@@ -1,0 +1,8 @@
+.dark>* {
+    background-color: #0f2741;
+    color: #62a8f3;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
