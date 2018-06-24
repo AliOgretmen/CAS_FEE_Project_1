@@ -43,4 +43,7 @@ body {
     border-left: 2px;
     border-left-color: black;
 }
-
+.current{
+    display: flex;
+    justify-content: center;
+}

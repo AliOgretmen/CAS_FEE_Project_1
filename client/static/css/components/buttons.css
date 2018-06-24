@@ -27,10 +27,6 @@
     box-shadow: 0 0 0 0.2rem #8bc428;
 }
 
-.btn-red {
-    background-color: rgb(230, 52, 52);
-    color: #161616;
-}
 
 .btn-blue {
     background-color: rgb(129, 184, 235);
@@ -48,7 +44,7 @@
 .btn-white:focus {
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0px 0px 0px white;
+    box-shadow: 0 0 0 white;
 }
 
 .btn-green {

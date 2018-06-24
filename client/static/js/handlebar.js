@@ -1,4 +1,3 @@
-
 function handleBarHelper() {
     this.orderBy = 'rate';
     this.filterBy = '';
@@ -40,17 +39,17 @@ function handleBarHelper() {
         this.containerId = id;
     }
 
-    this.setData = (data) =>{
+    this.setData = (data) => {
         this.data = data;
     }
 }
 
 Handlebars.registerHelper("formatDate", function (datetime, format) {
-    if (moment) { 
-       if(!datetime){
-           return '';
-       }
-       return moment(datetime).format(format); 
+    if (moment) {
+        if (!datetime) {
+            return '';
+        }
+        return moment(datetime).format(format);
     }
     else {
         return datetime;
@@ -60,8 +59,8 @@ Handlebars.registerHelper("formatDate", function (datetime, format) {
 Handlebars.registerHelper("eq", function (a, b) {
     a = a || [];
     const trueCount = a.filter(item => item == true)
-    if (trueCount.length == b) { 
-       return true
+    if (trueCount.length == b) {
+        return true
     }
     return false
 });

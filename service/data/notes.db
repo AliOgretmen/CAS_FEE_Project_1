@@ -1,0 +1,2 @@
+{"description":"Test 2","done":"2018-06-24T11:11:10.840Z","created":"2018-06-23T22:22:54.993Z","due":"2018-06-27T00:00:00.000Z","isFinished":false,"rate":[true,false,false],"text":"Note 2","_id":"DzUTVOBhbim2edyV"}
+{"description":"Test 1","done":"2018-06-24T00:22:30.159Z","created":"2018-06-23T22:22:54.993Z","due":"2018-06-28T00:00:00.000Z","isFinished":false,"rate":[true,true,false],"text":"Note 1","_id":"XCduIL4IhgjyRJOM"}
