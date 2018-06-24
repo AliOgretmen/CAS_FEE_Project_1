@@ -29,10 +29,10 @@ let shared = (
             document.getElementById('date').innerHTML = moment().format('DD.MM.YYYY');
         }
 
-        if(myLocalStorage.getItem('theme'))
+        if (myLocalStorage.getItem('theme'))
             switchTheme(myLocalStorage.getItem('theme'));
 
-        return{
+        return {
             setCurrentDate,
             switchTheme,
             myLocalStorage

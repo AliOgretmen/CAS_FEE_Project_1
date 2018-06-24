@@ -2,6 +2,7 @@ let note = null;
 
 function init() {
     note = new Note();
+    delete note._id;
     let currentID = window.location.search || '';
     const urlParams = currentID.replace('?', '').split('=');
     if (urlParams[0] && urlParams[0] == 'id' && urlParams[1]) {
@@ -20,7 +21,6 @@ function init() {
 const renderTemplate = (filter = '', order = 'rate') => {
     helper.setContainerId('details-form');
     helper.setTemplateId('details-template');
-    console.log('note', note);
     helper.setData(note);
     helper.renderTodos();
 }
@@ -43,7 +43,6 @@ function populateRate(rate){
 
 function saveAllDetails() {
     if (note._id) {
-
         storage.UpdateNote(note, function (){});
     } else {
         storage.AddNote(note,function (){});

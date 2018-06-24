@@ -1,2 +1,9 @@
-{"description":"Test 2","done":"2018-06-24T11:11:10.840Z","created":"2018-06-23T22:22:54.993Z","due":"2018-06-27T00:00:00.000Z","isFinished":false,"rate":[true,false,false],"text":"Note 2","_id":"DzUTVOBhbim2edyV"}
-{"description":"Test 1","done":"2018-06-24T00:22:30.159Z","created":"2018-06-23T22:22:54.993Z","due":"2018-06-28T00:00:00.000Z","isFinished":false,"rate":[true,true,false],"text":"Note 1","_id":"XCduIL4IhgjyRJOM"}
+{"description":"Test 1","done":"","created":"2018-06-24T20:35:08.594Z","due":"2018-06-28T00:00:00.000Z","isFinished":false,"rate":[true,true,true],"text":"Note 1","_id":"Inb2pd47p78NXJt3"}
+{"description":"Test 1","done":"2018-06-24T21:02:16.550Z","created":"2018-06-24T20:35:08.594Z","due":"2018-06-28T00:00:00.000Z","isFinished":true,"rate":[true,true,true],"text":"Note 1","_id":"Inb2pd47p78NXJt3"}
+{"description":"Test 1","done":"","created":"2018-06-24T20:35:08.594Z","due":"2018-06-28T00:00:00.000Z","isFinished":false,"rate":[true,true,true],"text":"Note 1","_id":"Inb2pd47p78NXJt3"}
+{"description":"Test 1","done":"","created":"2018-06-24T20:35:08.594Z","due":"2018-06-28T00:00:00.000Z","isFinished":false,"rate":[true,true,false],"text":"Note 1","_id":"Inb2pd47p78NXJt3"}
+{"$$deleted":true,"_id":"Inb2pd47p78NXJt3"}
+{"description":"Test 1","done":"","created":"2018-06-24T21:02:58.040Z","due":"2018-06-29T00:00:00.000Z","isFinished":false,"rate":[true,true,true],"text":"Note 1","_id":"O8q4cfvbsnWeAdjH"}
+{"description":"Test 2","done":"","created":"2018-06-24T21:03:20.065Z","due":"2018-06-29T00:00:00.000Z","isFinished":false,"rate":[true,true,false],"text":"Note 2","_id":"tJVcz9pO33Q9jEne"}
+{"description":"Test 3","done":"","created":"2018-06-24T21:11:48.482Z","due":"2018-06-30T00:00:00.000Z","isFinished":false,"rate":[true,false,false],"text":"Note 3","_id":"HGFlwbSQ0xnSITGF"}
+{"description":"Test 3","done":"2018-06-24T21:12:31.240Z","created":"2018-06-24T21:11:48.482Z","due":"2018-06-30T00:00:00.000Z","isFinished":true,"rate":[true,false,false],"text":"Note 3","_id":"HGFlwbSQ0xnSITGF"}

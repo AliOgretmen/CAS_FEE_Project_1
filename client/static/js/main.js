@@ -4,6 +4,7 @@ const sortByCreatedDate = $('#sortByCreatedDate');
 const sortByImportance = $('#sortByImportance');
 const isFinishedCheckbox = $(".is-finished");
 let toogleShowFinished = true;
+let interval = null;
 
 const renderTemplate = (filter = '', order = 'rate') => {
     const theme = shared.myLocalStorage.getItem('theme');
@@ -12,15 +13,19 @@ const renderTemplate = (filter = '', order = 'rate') => {
     helper.setTemplateId('task-template');
     helper.setFilterBy(filter);
     helper.setOrderBy(order);
+/*
+    if (!interval) {
+        interval = setInterval(function () {
 
-    setInterval(function () {
-        storage.GetNotes(helper.orderBy, helper.filterBy, function(data){
-            helper.setData(data);
-            helper.renderTodos();
-        })
 
-    }, 1000)
+        }, 3000);
 
+    }
+    */
+    storage.GetNotes(helper.orderBy, helper.filterBy, function (data) {
+        helper.setData(data);
+        helper.renderTodos();
+    })
     shared.setCurrentDate();
 }
 
@@ -49,11 +54,11 @@ showFinished.on('click', () => {
 
 const onFinishedClicked = (e) => {
     const isChecked = $(e.target).is(":checked");
-    storage.GetNoteById(e.target.id, function (result){
-        let selected = result.data; 
+    storage.GetNoteById(e.target.id, function (result) {
+        let selected = result.data;
         selected.isFinished = isChecked;
         selected.done = isChecked ? new Date() : '';
-        storage.UpdateNote(selected, function(){
+        storage.UpdateNote(selected, function () {
             renderTemplate();
         });
     });
