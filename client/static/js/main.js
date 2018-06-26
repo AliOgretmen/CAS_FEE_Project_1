@@ -8,8 +8,6 @@
     let toggleFinishedNotes = true;
 
     const renderTemplate = (filter = '', order = 'rate') => {
-        const theme = shared.myLocalStorage.getItem('theme');
-        shared.switchTheme(theme);
         helper.setContainerId('main-container');
         helper.setTemplateId('task-template');
         helper.setFilterBy(filter);
@@ -83,7 +81,6 @@
             }
         })
     }
-
 
     renderTemplate();
 
