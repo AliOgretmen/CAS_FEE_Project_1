@@ -4,52 +4,37 @@ const db = new Datastore({
     autoload: true
 });
 
-const addNote = (note, callback) => {
-    console.log('gelebildim', note);
-    db.insert(note, (err, newDoc) => {
-        resolver(err, callback, newDoc);
-    });
-}
 
-const updateNote = (note, callback) => {
-    db.update({
-        _id: note._id
-    }, note, {}, (err, newDoc) => {
-        resolver(err, callback, newDoc);
+const addNote = (note) => {
+    return new Promise(function(resolve, reject){
+        db.insert(note, (err, data) => err ? reject(err) : resolve(data));
     });
-}
+};
 
-const deleteNote = (id, callback) => {
-    db.remove({
-        _id: id
-    }, {
-        multi: true
-    }, (err, newDoc) => {
-        resolver(err, callback, newDoc);
+const updateNote = (note) => {
+    return new Promise(function(resolve, reject){
+        db.update({_id: note._id}, note, {}, (err, data) => err ? reject(err) : resolve(data));
     });
-}
+};
 
-const findNote = (id, callback) => {
-    db.findOne({
-        _id: id
-    }, (err, newDoc) => {
-        resolver(err, callback, newDoc);
+const deleteNote = (id) => {
+    return new Promise(function(resolve, reject){
+        db.remove({_id: id}, {multi: true}, (err, data) => err ? reject(err) : resolve(data));
     });
-}
+};
 
-const findAllNote = (callback) => {
-    db.find({}, (err, newDoc) => {
-        resolver(err, callback, newDoc);
+const findNote = (id) => {
+    return new Promise(function(resolve, reject){
+        db.findOne({_id: id}, (err, data) => err ? reject(err) : resolve(data));
     });
-}
+};
 
-const resolver = (err, callback, newDoc) => {
-    if (err) {
-        callback(err);
-    } else {
-        callback(null, newDoc);
-    }
-}
+const findAllNote = () => {
+    return new Promise(function(resolve, reject){
+        db.find({}, (err, data) => err ? reject(err) : resolve(data));
+    });
+};
+
 
 module.exports = {
     addNote,
