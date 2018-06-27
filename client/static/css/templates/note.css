@@ -1,9 +1,9 @@
 .task {
-    background: rgb(3, 47, 83);
+    background: #394e657a;
     padding: 10px 10px;
     border-radius: 4px;
     margin-bottom: 10px;
-    color: white;
+    color: #FFFAF0;
 }
 
 .task>div {
@@ -83,7 +83,6 @@
     flex: 1;
     overflow: hidden;
     padding: 10px 10px;
-    /* you need to remove this and adjust heigh with javascript*/
     height: 50px;
     border-radius: 4px;
     color: black;

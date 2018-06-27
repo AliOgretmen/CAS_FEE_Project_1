@@ -4,7 +4,6 @@
     const sortByFinishedDate = $('#sortByFinishedDate');
     const sortByCreatedDate = $('#sortByCreatedDate');
     const sortByImportance = $('#sortByImportance');
-    const isFinishedCheckbox = $(".is-finished");
     let toggleFinishedNotes = true;
 
     const renderTemplate = (filter = '', order = 'rate') => {
@@ -22,14 +21,17 @@
     }
 
     sortByCreatedDate.on('click', () => {
+        shared.myLocalStorage.setItem("orderBy", 'due');
         renderTemplate('', 'due');
     });
 
     sortByFinishedDate.on('click', () => {
+        shared.myLocalStorage.setItem("orderBy", 'done');
         renderTemplate('', 'done');
     });
 
     sortByImportance.on('click', () => {
+        shared.myLocalStorage.setItem("orderBy", 'rate');
         renderTemplate('', 'rate');
     });
 
@@ -43,6 +45,7 @@
             helper.setFilterBy('isFinished');
             renderTemplate('isFinished', '');
         }
+        shared.myLocalStorage.setItem("isFinished", toggleFinishedNotes);
     });
 
     const onFinishedClicked = (e) => {
@@ -76,13 +79,16 @@
 
     function checkDescriptions(){
         $('.list-container').each( function() {
-            if( $(this).html().match(/\n/gusm).length < 3){
+            if( $(this).html().match(/\n/gusm).length < 10){
                 $(this).next().hide();
             }
         })
     }
 
-    renderTemplate();
+
+    let orderByFromLocalStorage = shared.myLocalStorage.getItem("orderBy");
+
+    renderTemplate('', orderByFromLocalStorage);
 
 })(jQuery, shared, helper, http);
 

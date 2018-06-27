@@ -16,7 +16,8 @@
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn:checked{
     cursor: pointer;
     text-decoration: none;
     box-shadow: 1px 1px 1px white;
@@ -29,15 +30,16 @@
 
 
 .btn-blue {
-    background-color: rgb(129, 184, 235);
+    background-color: #81B8EB;
     color: #161616;
 }
 
 .btn-white {
-    background-color:  #ffffff;
+    background-color:  #eeeeee;
     color: #161616;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-color: #d4e4f5;
 }
 
 .btn-white:hover,
